@@ -1,0 +1,6 @@
+.container-parent {
+  height: 400px;
+  width: 400px;
+  border: 1px solid blue;
+  background: goldenrod;
+}

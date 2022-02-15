@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Employee } from 'src/app/interface/employee.interface';
+import { Employee } from '../../interface/employee.interface';
 
 @Component({
   selector: 'app-child-employee',

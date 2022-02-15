@@ -30,8 +30,12 @@ export class ParentEmployeeComponent implements OnInit {
   onClickHandler() {
     console.log(this.id);
     this.id++;
+    let employeeLength: number = 0;
+    if (this.employees) {
+      employeeLength = this.employees.length;
+    }
     console.log(this.id);
-    if (this.id < this.employees.length) {
+    if (this.id < employeeLength) {
       this.employeeService.getEmployeeById(this.id).subscribe({
         next: (data) => {
           this.employee = data;
@@ -41,5 +45,12 @@ export class ParentEmployeeComponent implements OnInit {
     } else {
       this.id = 0;
     }
+  }
+
+  checkIfEmployeeExists() {
+    if (this.employee) {
+      return true;
+    }
+    return false;
   }
 }

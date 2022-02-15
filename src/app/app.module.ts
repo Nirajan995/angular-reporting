@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { ParentEmployeeComponent } from './components/parent-employee/parent-employee.component';
+import { ChildEmployeeComponent } from './components/child-employee/child-employee.component';
 
 @NgModule({
-  declarations: [AppComponent, ParentComponent, ChildComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  declarations: [AppComponent, ParentComponent, ChildComponent, ParentEmployeeComponent, ChildEmployeeComponent],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -6,7 +6,7 @@
 
 - [x] Passing Data -> Parent to Child and Child to Parent
 
-- [ ] Observables API calls and services
+- [x] Observables API calls and services
 
 - [ ] Forms and HTTPs request
 

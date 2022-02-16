@@ -8,13 +8,16 @@ import { EmployeeService } from '../../services/employee.service';
   styleUrls: ['./parent-employee.component.css'],
 })
 export class ParentEmployeeComponent implements OnInit {
-  private id: number = 0;
+  private id: number = 1;
+  private index: number = 1;
   employees!: Employee[];
   employee!: Employee;
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit(): void {
     this.retrieveEmployees();
+    this.firstRender();
+    console.log(this.id);
   }
 
   retrieveEmployees(): void {
@@ -27,38 +30,25 @@ export class ParentEmployeeComponent implements OnInit {
     });
   }
 
-  // method:1
-  // onClickHandler() {
-  //   console.log(this.id);
-  //   this.id++;
-  //   let employeeLength: number = 0;
-  //   if (this.employees) {
-  //     employeeLength = this.employees.length;
-  //   }
-  //   console.log(this.id);
-  //   if (this.id < employeeLength) {
-  //     this.employeeService.getEmployeeById(this.id).subscribe({
-  //       next: (data) => {
-  //         this.employee = data;
-  //       },
-  //       error: (e) => console.error(e),
-  //     });
-  //   } else {
-  //     this.id = 0;
-  //   }
-  // }
+  firstRender() {
+    this.employeeService.getEmployeeById(this.id).subscribe({
+      next: (data) => {
+        this.employee = data;
+      },
+      error: (e) => console.error(e),
+    });
+  }
 
-  // method2
+  // method2;
   onClickHandler() {
-    this.id++;
-    let employeeLength: number = 0;
-    if (this.employees) {
-      employeeLength = this.employees.length;
-    }
-    if (this.id < employeeLength) {
-      this.employee = this.employees[this.id];
+    if (this.index < this.employees.length) {
+      console.log(this.index);
+      this.employee = this.employees[this.index];
+      this.index++;
+      console.log(this.employee);
     } else {
-      this.id = 0;
+      this.index = 0;
+      this.employee = this.employees[this.index];
     }
   }
 

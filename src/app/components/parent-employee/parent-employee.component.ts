@@ -27,21 +27,36 @@ export class ParentEmployeeComponent implements OnInit {
     });
   }
 
+  // method:1
+  // onClickHandler() {
+  //   console.log(this.id);
+  //   this.id++;
+  //   let employeeLength: number = 0;
+  //   if (this.employees) {
+  //     employeeLength = this.employees.length;
+  //   }
+  //   console.log(this.id);
+  //   if (this.id < employeeLength) {
+  //     this.employeeService.getEmployeeById(this.id).subscribe({
+  //       next: (data) => {
+  //         this.employee = data;
+  //       },
+  //       error: (e) => console.error(e),
+  //     });
+  //   } else {
+  //     this.id = 0;
+  //   }
+  // }
+
+  // method2
   onClickHandler() {
-    console.log(this.id);
     this.id++;
     let employeeLength: number = 0;
     if (this.employees) {
       employeeLength = this.employees.length;
     }
-    console.log(this.id);
     if (this.id < employeeLength) {
-      this.employeeService.getEmployeeById(this.id).subscribe({
-        next: (data) => {
-          this.employee = data;
-        },
-        error: (e) => console.error(e),
-      });
+      this.employee = this.employees[this.id];
     } else {
       this.id = 0;
     }

@@ -37,6 +37,7 @@ export class ParentFormComponent implements OnInit {
   }
 
   firstRender() {
+    this.renderEmployee = true;
     this.employeeService.getEmployeeById(this.id).subscribe({
       next: (data) => {
         this.employee = data;

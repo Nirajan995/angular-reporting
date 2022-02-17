@@ -8,3 +8,12 @@
 ul {
   list-style: none;
 }
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.alert {
+  color: red;
+}

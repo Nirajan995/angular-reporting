@@ -10,6 +10,8 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class ParentFormComponent implements OnInit {
   private id: number = 1;
   private index: number = 1;
+  renderForm = false;
+  renderEmployee = false;
   employees!: Employee[];
   employee!: Employee;
   constructor(private employeeService: EmployeeService) {}
@@ -29,6 +31,10 @@ export class ParentFormComponent implements OnInit {
       error: (e) => console.error(e),
     });
   }
+  onAddEmployee() {
+    this.renderEmployee = false;
+    this.renderForm = true;
+  }
 
   firstRender() {
     this.employeeService.getEmployeeById(this.id).subscribe({
@@ -41,6 +47,8 @@ export class ParentFormComponent implements OnInit {
 
   // method2;
   onClickHandler() {
+    this.renderEmployee = true;
+    this.renderForm = false;
     if (this.index < this.employees.length) {
       console.log(this.index);
       this.employee = this.employees[this.index];

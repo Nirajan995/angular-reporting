@@ -2,10 +2,15 @@
   <button class="button-parent" (click)="onClickHandler()">
     Next employee
   </button>
+  <button class="button-parent-2" (click)="onAddEmployee()">
+    Add Employee
+  </button>
   <h3>Company</h3>
 
   <app-child-form
     *ngIf="checkIfEmployeeExists()"
     [employee]="employee"
+    [renderForm]="renderForm"
+    [renderEmployee]="renderEmployee"
   ></app-child-form>
 </div>

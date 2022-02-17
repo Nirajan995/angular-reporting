@@ -8,8 +8,14 @@ import { Employee } from 'src/app/interface/employee.interface';
 })
 export class ChildFormComponent implements OnInit {
   @Input() employee!: Employee;
+  @Input() renderForm!: boolean;
+  @Input() renderEmployee!: boolean;
+  name = '';
 
   constructor() {}
 
   ngOnInit(): void {}
+  onSubmit(employee: any) {
+    console.log(employee);
+  }
 }

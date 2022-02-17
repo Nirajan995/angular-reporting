@@ -9,3 +9,12 @@
 .button-parent-2 {
   margin-left: 10px;
 }
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.alert {
+  color: red;
+}

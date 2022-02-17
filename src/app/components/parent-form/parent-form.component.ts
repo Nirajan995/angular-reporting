@@ -10,7 +10,7 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class ParentFormComponent implements OnInit {
   private id: number = 1;
   private index: number = 1;
-  renderForm = false;
+  renderForm: boolean = false;
   renderEmployee = false;
   employees!: Employee[];
   employee!: Employee;
@@ -31,9 +31,14 @@ export class ParentFormComponent implements OnInit {
       error: (e) => console.error(e),
     });
   }
+
+  onSubmit(employee: any) {
+    this.renderForm = false;
+    this.employee = employee;
+  }
+
   onAddEmployee() {
-    this.renderEmployee = false;
-    this.renderForm = true;
+    this.renderForm = !this.renderForm;
   }
 
   firstRender() {

@@ -1,0 +1,7 @@
+.container-parent {
+  height: 400px;
+  width: 400px;
+  border: 1px solid blue;
+  background: rgb(173, 224, 105);
+  margin-bottom: 20px;
+}

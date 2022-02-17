@@ -1,0 +1,16 @@
+<div class="container-parent">
+  <button class="button-parent" (click)="onClickHandler()">
+    Next employee
+  </button>
+  <button class="button-parent-2" (click)="onAddEmployee()">
+    Add Employee
+  </button>
+  <h2>Company</h2>
+
+  <app-child-form
+    *ngIf="checkIfEmployeeExists()"
+    [employee]="employee"
+    [renderForm]="renderForm"
+    [renderEmployee]="renderEmployee"
+  ></app-child-form>
+</div>

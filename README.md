@@ -13,3 +13,7 @@
 - [ ] ViewChild
 
 - [ ] LifeCycle hooks in Angular
+
+## Deployed site
+
+- [x] https://thirsty-pike-247cb8.netlify.app/

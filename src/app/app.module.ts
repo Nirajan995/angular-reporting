@@ -12,6 +12,8 @@ import { ParentEmployeeComponent } from './components/parent-employee/parent-emp
 import { ChildEmployeeComponent } from './components/child-employee/child-employee.component';
 import { ParentFormComponent } from './components/parent-form/parent-form.component';
 import { ChildFormComponent } from './components/child-form/child-form.component';
+import { ParentBackendComponent } from './components/parent-backend/parent-backend.component';
+import { ChildBackendComponent } from './components/child-backend/child-backend.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ChildFormComponent } from './components/child-form/child-form.component
     ChildEmployeeComponent,
     ParentFormComponent,
     ChildFormComponent,
+    ParentBackendComponent,
+    ChildBackendComponent,
   ],
   imports: [
     BrowserModule,

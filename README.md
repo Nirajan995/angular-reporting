@@ -8,7 +8,7 @@
 
 - [x] Observables API calls and services
 
-- [ ] Forms and HTTPs request
+- [x] Forms and HTTPs request
 
 - [ ] ViewChild
 

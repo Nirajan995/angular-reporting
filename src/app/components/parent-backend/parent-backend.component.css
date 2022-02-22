@@ -1,0 +1,20 @@
+.container-parent {
+  height: 370px;
+  width: 400px;
+  border: 1px solid blue;
+  background: rgb(235, 213, 118);
+  margin-bottom: 20px;
+}
+
+.button-parent-2 {
+  margin-left: 10px;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.alert {
+  color: red;
+}

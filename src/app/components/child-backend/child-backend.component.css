@@ -1,0 +1,10 @@
+.container-child {
+  height: 240px;
+  width: 400px;
+  border: 1px solid rgb(128, 0, 128);
+  background: rgb(240, 87, 150);
+}
+
+ul {
+  list-style: none;
+}

@@ -8,6 +8,7 @@ import { Employee } from '../interface/employee.interface';
 })
 export class EmployeeService {
   private url = 'https://jsonplaceholder.typicode.com/users/';
+  private url1 = 'http://localhost:4000/api/users/';
   constructor(private http: HttpClient) {}
 
   getEmployees(): Observable<Employee[]> {
@@ -15,5 +16,8 @@ export class EmployeeService {
   }
   getEmployeeById(id: number): Observable<Employee> {
     return this.http.get<Employee>(this.url + `${id}`);
+  }
+  postEmployees(body: any): Observable<Employee[]> {
+    return this.http.post<Employee[]>(this.url1, body);
   }
 }
